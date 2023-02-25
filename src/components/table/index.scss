@@ -1,0 +1,88 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  thead tr {
+    height: 2rem;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+  }
+  thead tr th {
+    text-transform: uppercase;
+    color: #7322a4;
+    font-weight: bold;
+    font-size: 0.8rem;
+    min-width: 100px;
+    flex: 1;
+    text-align: left;
+  }
+}
+.cell {
+  padding-top: 0.5rem;
+  // position: relative;
+
+  #{&}__title {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    span {
+      margin-left: 0.5rem;
+      color: #646466;
+      font-weight: bold;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+  }
+
+  #{&}__content {
+    &__item {
+      min-height: 3rem;
+      background-color: #fff;
+      box-shadow: 1px 1px 3px #ccc;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s ease-out;
+      padding: 1rem;
+      height: 100%;
+
+      &__row {
+        padding: 0 1rem 0 1rem;
+        max-height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      &__data {
+        font-size: 0.875rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+      &__photos {
+        padding: 1rem;
+
+        min-height: 25px;
+        & > div:first-child {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+.test {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}

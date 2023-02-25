@@ -1,0 +1,33 @@
+.img_template {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  #{&}__header {
+    color: #fff;
+    position: absolute;
+    font-weight: bold;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+  }
+  #{&}__slidein__title {
+    font-size: 0.75rem;
+    background-color: #fff;
+    color: #7322a4;
+    position: absolute;
+    transform: translateY(100px);
+    transition: all 0.4s ease-out;
+    height: 5rem;
+    width: 100%;
+    opacity: 0.8;
+    bottom: 0;
+    padding: 0.5rem;
+    &.slide-in {
+      transform: translateY(0);
+    }
+  }
+}
